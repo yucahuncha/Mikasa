@@ -72,7 +72,16 @@ border-radius: 20px;</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(166, 227, 233);</string>
+      <string notr="true">QPushButton{
+background-color: rgb(166, 227, 233);
+}
+QPushButton:hover{
+	background-color: rgb(222, 252, 249);
+}
+
+QPushButton:pressed {
+	background-color: rgb(13, 115, 119);
+}</string>
      </property>
      <property name="text">
       <string>开始 </string>
@@ -93,7 +102,17 @@ border-radius: 20px;</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(166, 227, 233);</string>
+      <string notr="true">QPushButton{
+background-color: rgb(166, 227, 233);
+}
+QPushButton:hover{
+	background-color: rgb(222, 252, 249);
+}
+
+QPushButton:pressed {
+	background-color: rgb(13, 115, 119);
+}
+</string>
      </property>
      <property name="text">
       <string>云主机列表</string>
@@ -114,7 +133,17 @@ border-radius: 20px;</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(166, 227, 233);</string>
+      <string notr="true">QPushButton{
+background-color: rgb(166, 227, 233);
+}
+QPushButton:hover{
+	background-color: rgb(222, 252, 249);
+}
+
+QPushButton:pressed {
+	background-color: rgb(13, 115, 119);
+}
+</string>
      </property>
      <property name="text">
       <string>设置</string>
@@ -135,14 +164,25 @@ border-radius: 20px;</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(166, 227, 233);</string>
+      <string notr="true">QPushButton{
+background-color: rgb(166, 227, 233);
+}
+
+QPushButton:hover{
+	background-color: rgb(222, 252, 249);
+}
+
+QPushButton:pressed {
+	background-color: rgb(13, 115, 119);
+}
+</string>
      </property>
      <property name="text">
       <string>关于</string>
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="widget_2" native="true">
+   <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -151,49 +191,11 @@ border-radius: 20px;</string>
       <height>881</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">text-align: center;</string>
+    <property name="currentIndex">
+     <number>1</number>
     </property>
-    <widget class="QFrame" name="frame_2">
-     <property name="geometry">
-      <rect>
-       <x>11</x>
-       <y>11</y>
-       <width>1231</width>
-       <height>641</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">image: url(:/img/piingpai.png);</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::Shape::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Shadow::Raised</enum>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>660</y>
-       <width>1231</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>秋天是倒放的春天。</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
-     </property>
-    </widget>
+    <widget class="QWidget" name="page"/>
+    <widget class="QWidget" name="page_2"/>
    </widget>
   </widget>
  </widget>

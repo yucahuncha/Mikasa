@@ -28,6 +28,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         res.qrc
+        form4.h form4.cpp form4.ui
+        form1.h form1.cpp form1.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Mikasa APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
