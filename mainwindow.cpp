@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->stackedWidget->insertWidget(eForm1,From1);      //添加页面
     ui->stackedWidget->insertWidget(eForm4,From4);
 
-    ui->stackedWidget->setCurrentIndex(eForm4);         //默认显示
+    ui->stackedWidget->setCurrentIndex(eForm1);         //默认显示
 
 }
 

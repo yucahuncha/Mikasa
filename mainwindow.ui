@@ -46,8 +46,9 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(203, 241, 245);
-border-radius: 20px;</string>
+     <string notr="true">
+background-color: rgb(243, 244, 245);
+border-radius: 15px;</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::Shape::StyledPanel</enum>
@@ -73,25 +74,41 @@ border-radius: 20px;</string>
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton{
-background-color: rgb(166, 227, 233);
+	border: 2px solid black;
+	
+	
+	
 }
+
+
 QPushButton:hover{
-	background-color: rgb(222, 252, 249);
+	background-color: rgb(219, 222, 224);
 }
 
 QPushButton:pressed {
-	background-color: rgb(13, 115, 119);
-}</string>
+	
+}
+</string>
      </property>
      <property name="text">
       <string>开始 </string>
+     </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/new/logo/img/ki.png</normaloff>:/new/logo/img/ki.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>100</y>
+       <y>80</y>
        <width>301</width>
        <height>61</height>
       </rect>
@@ -103,26 +120,37 @@ QPushButton:pressed {
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton{
-background-color: rgb(166, 227, 233);
+	border: 2px solid black;
 }
+
 QPushButton:hover{
-	background-color: rgb(222, 252, 249);
+	background-color: rgb(219, 222, 224);
 }
 
 QPushButton:pressed {
-	background-color: rgb(13, 115, 119);
+	
 }
 </string>
      </property>
      <property name="text">
       <string>云主机列表</string>
      </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/new/logo/img/lie.png</normaloff>:/new/logo/img/lie.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
     </widget>
     <widget class="QPushButton" name="pushButton_3">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>190</y>
+       <y>150</y>
        <width>301</width>
        <height>61</height>
       </rect>
@@ -134,26 +162,37 @@ QPushButton:pressed {
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton{
-background-color: rgb(166, 227, 233);
+	border: 2px solid black;
 }
+
 QPushButton:hover{
-	background-color: rgb(222, 252, 249);
+	background-color: rgb(219, 222, 224);
 }
 
 QPushButton:pressed {
-	background-color: rgb(13, 115, 119);
+	
 }
 </string>
      </property>
      <property name="text">
       <string>设置</string>
      </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/new/logo/img/s.png</normaloff>:/new/logo/img/s.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
     </widget>
     <widget class="QPushButton" name="pushButton_4">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>280</y>
+       <y>220</y>
        <width>301</width>
        <height>61</height>
       </rect>
@@ -165,20 +204,30 @@ QPushButton:pressed {
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton{
-background-color: rgb(166, 227, 233);
+	border: 2px solid black;
 }
 
 QPushButton:hover{
-	background-color: rgb(222, 252, 249);
+	background-color: rgb(219, 222, 224);
 }
 
 QPushButton:pressed {
-	background-color: rgb(13, 115, 119);
+	
 }
 </string>
      </property>
      <property name="text">
       <string>关于</string>
+     </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/new/logo/img/g.png</normaloff>:/new/logo/img/g.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
      </property>
     </widget>
    </widget>
@@ -199,6 +248,8 @@ QPushButton:pressed {
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
  <connections/>
 </ui>

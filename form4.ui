@@ -29,8 +29,8 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>470</y>
+     <x>30</x>
+     <y>450</y>
      <width>1201</width>
      <height>51</height>
     </rect>
@@ -42,6 +42,25 @@
    </property>
    <property name="text">
     <string>秋天是倒放的春天</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>840</y>
+     <width>1241</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="locale">
+    <locale language="Chinese" country="China"/>
+   </property>
+   <property name="text">
+    <string>版权所有 2024 heyushixiang,当前版本1.0.0</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignCenter</set>
