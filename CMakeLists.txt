@@ -21,6 +21,8 @@ set(PROJECT_SOURCES
         mainwindow.ui
         logo.rc
         ${TS_FILES}
+        Loadfile.cpp
+        Loadfile.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -30,6 +32,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         res.qrc
         form4.h form4.cpp form4.ui
         form1.h form1.cpp form1.ui
+        add.h add.cpp add.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Mikasa APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
