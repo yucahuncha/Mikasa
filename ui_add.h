@@ -13,92 +13,90 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QWidget>
-#include "Loadfile.h"
+
 QT_BEGIN_NAMESPACE
 
 class Ui_add
 {
 public:
     QLabel *label;
-    QPushButton *no;
-    QPushButton *ok;
-    QLineEdit *ming;
-    QLabel *label_2;
-    QLineEdit *zhuji;
-    QLabel *label_3;
-    QLineEdit *name;
-    QLabel *label_5;
-    QLineEdit *password;
-    QLabel *label_4;
+    QPushButton *Windows;
+    QPushButton *Linux;
+    QStackedWidget *stackedWidget;
+    QWidget *page;
+    QWidget *page_2;
     QWidget *widget;
 
     void setupUi(QDialog *add)
     {
         if (add->objectName().isEmpty())
             add->setObjectName("add");
-        add->resize(915, 514);
+        add->resize(1039, 664);
         add->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
         label = new QLabel(add);
         label->setObjectName("label");
-        label->setGeometry(QRect(20, 20, 221, 41));
+        label->setGeometry(QRect(90, 20, 121, 41));
         QFont font;
         font.setPointSize(16);
         label->setFont(font);
-        no = new QPushButton(add);
-        no->setObjectName("no");
-        no->setGeometry(QRect(800, 470, 93, 28));
-        ok = new QPushButton(add);
-        ok->setObjectName("ok");
-        ok->setGeometry(QRect(690, 470, 93, 28));
-        ming = new QLineEdit(add);
-        ming->setObjectName("ming");
-        ming->setGeometry(QRect(80, 100, 269, 20));
-        label_2 = new QLabel(add);
-        label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(30, 100, 48, 21));
+        Windows = new QPushButton(add);
+        Windows->setObjectName("Windows");
+        Windows->setGeometry(QRect(40, 80, 131, 41));
         QFont font1;
-        font1.setPointSize(12);
-        label_2->setFont(font1);
-        zhuji = new QLineEdit(add);
-        zhuji->setObjectName("zhuji");
-        zhuji->setGeometry(QRect(80, 130, 269, 20));
-        label_3 = new QLabel(add);
-        label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(30, 128, 48, 21));
-        label_3->setFont(font1);
-        name = new QLineEdit(add);
-        name->setObjectName("name");
-        name->setGeometry(QRect(80, 160, 269, 20));
-        label_5 = new QLabel(add);
-        label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(30, 160, 48, 20));
-        label_5->setFont(font1);
-        password = new QLineEdit(add);
-        password->setObjectName("password");
-        password->setGeometry(QRect(84, 190, 261, 20));
-        label_4 = new QLabel(add);
-        label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(30, 190, 41, 21));
-        label_4->setFont(font1);
+        font1.setPointSize(14);
+        Windows->setFont(font1);
+        Windows->setStyleSheet(QString::fromUtf8("\n"
+"\n"
+"QPushButton{\n"
+"	border: 2px solid black;\n"
+"	border-radius: 10px;\n"
+"	color: rgb(73, 136, 253);\n"
+"}\n"
+"\n"
+"\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(219, 222, 224);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"	\n"
+"}\n"
+""));
+        Linux = new QPushButton(add);
+        Linux->setObjectName("Linux");
+        Linux->setGeometry(QRect(200, 80, 111, 41));
+        Linux->setFont(font1);
+        Linux->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	border: 2px solid black;\n"
+"	border-radius: 10px;\n"
+"	color: rgb(73, 136, 253);\n"
+"}\n"
+"\n"
+"\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(219, 222, 224);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"	\n"
+"}\n"
+""));
+        stackedWidget = new QStackedWidget(add);
+        stackedWidget->setObjectName("stackedWidget");
+        stackedWidget->setGeometry(QRect(0, 130, 1031, 531));
+        page = new QWidget();
+        page->setObjectName("page");
+        stackedWidget->addWidget(page);
+        page_2 = new QWidget();
+        page_2->setObjectName("page_2");
+        stackedWidget->addWidget(page_2);
         widget = new QWidget(add);
         widget->setObjectName("widget");
-        widget->setGeometry(QRect(20, 220, 661, 281));
-        widget->setStyleSheet(QString::fromUtf8("image: url(:/img/RDO.png);"));
-        widget->raise();
-        label->raise();
-        no->raise();
-        ok->raise();
-        ming->raise();
-        label_2->raise();
-        zhuji->raise();
-        label_3->raise();
-        name->raise();
-        label_5->raise();
-        password->raise();
-        label_4->raise();
+        widget->setGeometry(QRect(20, 10, 61, 61));
+        widget->setStyleSheet(QString::fromUtf8("image: url(:/new/logo/img/add.png);"));
 
         retranslateUi(add);
 
@@ -109,12 +107,8 @@ public:
     {
         add->setWindowTitle(QCoreApplication::translate("add", "\346\267\273\345\212\240\344\270\273\346\234\272", nullptr));
         label->setText(QCoreApplication::translate("add", "\346\267\273\345\212\240\344\270\273\346\234\272", nullptr));
-        no->setText(QCoreApplication::translate("add", "\345\217\226\346\266\210", nullptr));
-        ok->setText(QCoreApplication::translate("add", "\344\277\235\345\255\230", nullptr));
-        label_2->setText(QCoreApplication::translate("add", "\345\220\215\347\247\260:", nullptr));
-        label_3->setText(QCoreApplication::translate("add", "\344\270\273\346\234\272", nullptr));
-        label_5->setText(QCoreApplication::translate("add", "\347\224\250\346\210\267\345\220\215", nullptr));
-        label_4->setText(QCoreApplication::translate("add", "\345\257\206\347\240\201", nullptr));
+        Windows->setText(QCoreApplication::translate("add", "Windows", nullptr));
+        Linux->setText(QCoreApplication::translate("add", "Linux", nullptr));
     } // retranslateUi
 
 };

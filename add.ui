@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>915</width>
-    <height>514</height>
+    <width>1039</width>
+    <height>664</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,9 +19,9 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>90</x>
      <y>20</y>
-     <width>221</width>
+     <width>121</width>
      <height>41</height>
     </rect>
    </property>
@@ -34,169 +34,103 @@
     <string>添加主机</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="no">
+  <widget class="QPushButton" name="Windows">
    <property name="geometry">
     <rect>
-     <x>800</x>
-     <y>470</y>
-     <width>93</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>取消</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="ok">
-   <property name="geometry">
-    <rect>
-     <x>690</x>
-     <y>470</y>
-     <width>93</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>保存</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="ming">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>100</y>
-     <width>269</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>100</y>
-     <width>48</width>
-     <height>21</height>
+     <x>40</x>
+     <y>80</y>
+     <width>131</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
+     <pointsize>14</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">
+
+QPushButton{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: rgb(73, 136, 253);
+}
+
+
+QPushButton:hover{
+	background-color: rgb(219, 222, 224);
+}
+
+QPushButton:pressed {
+	
+}
+</string>
+   </property>
    <property name="text">
-    <string>名称:</string>
+    <string>Windows</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="zhuji">
+  <widget class="QPushButton" name="Linux">
    <property name="geometry">
     <rect>
-     <x>80</x>
+     <x>200</x>
+     <y>80</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: rgb(73, 136, 253);
+}
+
+
+QPushButton:hover{
+	background-color: rgb(219, 222, 224);
+}
+
+QPushButton:pressed {
+	
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Linux</string>
+   </property>
+  </widget>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
      <y>130</y>
-     <width>269</width>
-     <height>20</height>
+     <width>1031</width>
+     <height>531</height>
     </rect>
    </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>128</y>
-     <width>48</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>主机</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="name">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>160</y>
-     <width>269</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>160</y>
-     <width>48</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>用户名</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="password">
-   <property name="geometry">
-    <rect>
-     <x>84</x>
-     <y>190</y>
-     <width>261</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>190</y>
-     <width>41</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>密码</string>
-   </property>
+   <widget class="QWidget" name="page"/>
+   <widget class="QWidget" name="page_2"/>
   </widget>
   <widget class="QWidget" name="widget" native="true">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>220</y>
-     <width>661</width>
-     <height>281</height>
+     <y>10</y>
+     <width>61</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">image: url(:/img/RDO.png);</string>
+    <string notr="true">image: url(:/new/logo/img/add.png);</string>
    </property>
   </widget>
-  <zorder>widget</zorder>
-  <zorder>label</zorder>
-  <zorder>no</zorder>
-  <zorder>ok</zorder>
-  <zorder>ming</zorder>
-  <zorder>label_2</zorder>
-  <zorder>zhuji</zorder>
-  <zorder>label_3</zorder>
-  <zorder>name</zorder>
-  <zorder>label_5</zorder>
-  <zorder>password</zorder>
-  <zorder>label_4</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -33,6 +33,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         form4.h form4.cpp form4.ui
         form1.h form1.cpp form1.ui
         add.h add.cpp add.ui
+        windows.h windows.cpp windows.ui
+        linux.h linux.cpp linux.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Mikasa APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

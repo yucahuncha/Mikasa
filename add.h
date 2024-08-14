@@ -4,6 +4,8 @@
 #include <QDialog>
 #include <QMessageBox>
 #include "Loadfile.h"
+#include "windows.h"
+#include "linux.h"
 
 namespace Ui {
 class add;
@@ -21,12 +23,10 @@ public:
 
 
 private slots:
-    void on_no_clicked();
 
+    void on_Windows_clicked();
 
-    void on_ok_clicked();
-
-
+    void on_Linux_clicked();
 
 private:
     Ui::add *ui;

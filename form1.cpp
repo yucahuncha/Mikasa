@@ -7,11 +7,13 @@ Form1::Form1(QWidget *parent)
 {
     ui->setupUi(this);
 
+
 }
 
 Form1::~Form1()
 {
     delete ui;
+
 }
 
 void Form1::on_pushButton_clicked()
