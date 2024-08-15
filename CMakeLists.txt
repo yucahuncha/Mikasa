@@ -35,6 +35,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         add.h add.cpp add.ui
         windows.h windows.cpp windows.ui
         linux.h linux.cpp linux.ui
+        hostlist.h hostlist.cpp hostlist.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Mikasa APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

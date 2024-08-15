@@ -14,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     ui->setupUi(this);
+    this->setCentralWidget(ui->centralwidget);
 
     QWidget *From1 = new Form1(this);                   //页面别名
     QWidget *From4 = new Form4(this);

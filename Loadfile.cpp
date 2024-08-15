@@ -24,7 +24,7 @@ int openfile(QString text1,QString text2,QString text3,QString text4)
 
 
 int openfileWindows(QString text1,QString text2,QString text3,QString text4){
-    std::ofstream MyFile("example.txt",std::ios::app);
+    std::ofstream MyFile("example.Mikasa",std::ios::app);
     if (MyFile.is_open()) {
 
         // 向文件写入内容
@@ -45,7 +45,7 @@ int openfileWindows(QString text1,QString text2,QString text3,QString text4){
 }
 
 int openfileLinux(QString text1,QString text2,QString text3,QString text4){
-    std::ofstream MyFile("example.txt",std::ios::app);
+    std::ofstream MyFile("example.Mikasa",std::ios::app);
     if (MyFile.is_open()) {
 
         // 向文件写入内容

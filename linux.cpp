@@ -16,10 +16,19 @@ Linux::~Linux()
 
 void Linux::on_ok_clicked()
 {
-    QString text1 = ui->hostname->text();
-    QString text2 = ui->host->text();
-    QString text3 = ui->name->text();
-    QString text4 = ui->password->text();
+
+
+    QString text1 = NULL;
+    QString text2 = NULL;
+    QString text3 = NULL;
+    QString text4 = NULL;
+
+    text1 = ui->hostname->text();
+    text2 = ui->host->text();
+    text3 = ui->name->text();
+    text4 = ui->password->text();
+
+
 
     if(openfileLinux(text1,text2,text3,text4)==0)
     {
