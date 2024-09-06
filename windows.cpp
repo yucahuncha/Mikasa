@@ -20,12 +20,19 @@ void Windows::on_ok_clicked()
     QString text3 = ui->name->text();
     QString text4 = ui->password->text();
 
-    if(openfileWindows(text1,text2,text3,text4)==0)
+    if (!text1.isEmpty() && !text2.isEmpty() && !text3.isEmpty() && !text4.isEmpty())
     {
-        QMessageBox::information(nullptr, "信息", "保存成功");
+        if(openfileWindows(text1,text2,text3,text4)==0)
+        {
+            QMessageBox::information(nullptr, "信息", "保存成功");
+        }
+        else{
+            QMessageBox::information(nullptr, "信息", "保存失败");
+        }
     }
-    else{
-        QMessageBox::information(nullptr, "信息", "保存失败");
+    else
+    {
+        QMessageBox::information(nullptr, "信息", "输入有空白");
     }
 
 
@@ -39,6 +46,9 @@ void Windows::on_ok_clicked()
 
 void Windows::on_no_clicked()
 {
-
+    ui->hostname->clear();
+    ui->host->clear();
+    ui->name->clear();
+    ui->password->clear();
 }
 

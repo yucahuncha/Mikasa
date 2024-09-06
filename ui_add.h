@@ -29,13 +29,14 @@ public:
     QWidget *page;
     QWidget *page_2;
     QWidget *widget;
+    QPushButton *pushButton;
 
     void setupUi(QDialog *add)
     {
         if (add->objectName().isEmpty())
             add->setObjectName("add");
-        add->resize(1039, 664);
-        add->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
+        add->resize(1142, 677);
+        add->setLayoutDirection(Qt::LeftToRight);
         label = new QLabel(add);
         label->setObjectName("label");
         label->setGeometry(QRect(90, 20, 121, 41));
@@ -97,8 +98,12 @@ public:
         widget->setObjectName("widget");
         widget->setGeometry(QRect(20, 10, 61, 61));
         widget->setStyleSheet(QString::fromUtf8("image: url(:/new/logo/img/add.png);"));
+        pushButton = new QPushButton(add);
+        pushButton->setObjectName("pushButton");
+        pushButton->setGeometry(QRect(1040, 590, 91, 41));
 
         retranslateUi(add);
+        QObject::connect(pushButton, &QPushButton::clicked, add, qOverload<>(&QDialog::close));
 
         QMetaObject::connectSlotsByName(add);
     } // setupUi
@@ -109,6 +114,7 @@ public:
         label->setText(QCoreApplication::translate("add", "\346\267\273\345\212\240\344\270\273\346\234\272", nullptr));
         Windows->setText(QCoreApplication::translate("add", "Windows", nullptr));
         Linux->setText(QCoreApplication::translate("add", "Linux", nullptr));
+        pushButton->setText(QCoreApplication::translate("add", "\345\205\263\351\227\255", nullptr));
     } // retranslateUi
 
 };

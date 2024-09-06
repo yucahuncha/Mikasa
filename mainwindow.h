@@ -4,7 +4,9 @@
 #include <QMainWindow>
 #include "form4.h"
 #include "form1.h"
+#include "setting.h"
 #include <QMessageBox>
+#include "hostlist.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

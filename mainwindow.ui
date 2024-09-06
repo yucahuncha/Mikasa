@@ -46,10 +46,12 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="page"/>
       <widget class="QWidget" name="page_2"/>
+      <widget class="QWidget" name="page_4"/>
+      <widget class="QWidget" name="page_3"/>
      </widget>
     </item>
     <item row="1" column="0">
