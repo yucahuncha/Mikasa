@@ -64,3 +64,27 @@ int openfileLinux(QString text1,QString text2,QString text3,QString text4){
 
     return 0;
 }
+
+int Getrows()
+{
+    std::ifstream file("config.Mikasa");
+    if (!file.is_open())
+    {
+        return 0;
+    }
+
+    std::string line;
+    int lineCount = 0;
+
+    while (std::getline(file, line)) {
+        lineCount++;
+    }
+
+    file.close();
+
+    lineCount = lineCount/6;
+
+    return lineCount;
+}
+
+

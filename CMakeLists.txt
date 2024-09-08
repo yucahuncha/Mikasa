@@ -23,6 +23,7 @@ set(PROJECT_SOURCES
         ${TS_FILES}
         Loadfile.cpp
         Loadfile.h
+        QFlowLayout.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

@@ -20,7 +20,9 @@ int openfileWindows(QString text1,QString text2,QString text3,QString text4);
 
 int openfileLinux(QString text1,QString text2,QString text3,QString text4);
 
+int Getrows();
 
+QString xinxi();
 
 
 
