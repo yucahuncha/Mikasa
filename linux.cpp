@@ -1,6 +1,6 @@
 #include "linux.h"
 #include "ui_linux.h"
-#include "Loadfile.h"
+
 
 Linux::Linux(QWidget *parent)
     : QDialog(parent)
@@ -22,6 +22,7 @@ void Linux::on_ok_clicked()
     QString text2 = NULL;
     QString text3 = NULL;
     QString text4 = NULL;
+    QString text5 = "Linux";
 
     text1 = ui->hostname->text();
     text2 = ui->host->text();
@@ -29,9 +30,10 @@ void Linux::on_ok_clicked()
     text4 = ui->password->text();
 
 
+
     if (!text1.isEmpty() && !text2.isEmpty() && !text3.isEmpty() && !text4.isEmpty())
     {
-        if(openfileLinux(text1,text2,text3,text4)==0)
+        if(Qloadsql::insertData(text1,text5,text2,text3,text4))
         {
             QMessageBox::information(nullptr, "信息", "保存成功");
         }

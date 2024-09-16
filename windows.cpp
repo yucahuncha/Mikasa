@@ -19,10 +19,11 @@ void Windows::on_ok_clicked()
     QString text2 = ui->host->text();
     QString text3 = ui->name->text();
     QString text4 = ui->password->text();
+    QString text5 = "Windows";
 
     if (!text1.isEmpty() && !text2.isEmpty() && !text3.isEmpty() && !text4.isEmpty())
     {
-        if(openfileWindows(text1,text2,text3,text4)==0)
+        if(Qloadsql::insertData(text1,text5,text2,text3,text4))
         {
             QMessageBox::information(nullptr, "信息", "保存成功");
         }

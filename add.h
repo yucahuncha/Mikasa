@@ -3,7 +3,7 @@
 
 #include <QDialog>
 #include <QMessageBox>
-#include "Loadfile.h"
+
 #include "windows.h"
 #include "linux.h"
 

@@ -2,9 +2,10 @@
 #define WINDOWS_H
 
 #include <QDialog>
-#include "Loadfile.h"
 #include <QString>
 #include <QMessageBox>
+#include "Qloadsql.h"
+
 
 namespace Ui {
 class Windows;

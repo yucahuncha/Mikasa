@@ -3,9 +3,9 @@
 
 #include <QDialog>
 #include <QString>
-#include "Loadfile.h"
 #include <QMessageBox>
 #include "form1.h"
+#include "Qloadsql.h"
 
 namespace Ui {
 class Linux;

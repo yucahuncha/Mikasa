@@ -48,12 +48,42 @@ void hostlist::refreshHostList()
     QGridLayout *gridLayout = new QGridLayout(container);
 
     // 读取配置文件显示的QWidget数量
-    int totalItems = Getrows();
+//    int totalItems = Qloadsql::number();
      // 从配置文件读取每个组件的标题或数据
     int itemsPerRow = 4;  // 每行的widget数量
 
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("Mikasa.db");
+
+    // 打开数据库连接
+    if (!db.open()) {
+        qDebug() << "Failed to open database:" << db.lastError().text();
+
+    }
+
+    QSqlQuery query;
+    query.prepare("SELECT hostname, type, host, account_name, password FROM Mikasaconfig;");
+
+    // 执行查询
+    if (!query.exec()) {
+        qDebug() << "Failed to execute query:" << query.lastError().text();
+        db.close();
+
+    }
+
+    int i = -1;
+
     // 循环创建QWidget并添加到网格布局中
-    for (int i = 0; i < totalItems; ++i) {
+    while (query.next()){
+
+        i++;
+
+        QString hostname = query.value(0).toString();
+        QString type = query.value(1).toString();
+        QString host = query.value(2).toString();
+        QString accountName = query.value(3).toString();
+        QString password = query.value(4).toString();
+
         // 创建一个QWidget作为列表项
         QWidget *itemWidget = new QWidget(this);
         itemWidget->setStyleSheet("background-color: lightgray; border: 1px solid black;"
@@ -64,15 +94,15 @@ void hostlist::refreshHostList()
         QVBoxLayout *itemLayout = new QVBoxLayout(itemWidget);
 
         // 在每个QWidget中添加一个标签，使用从配置文件中读取的数据
-        QLabel *label = new QLabel("111", this);
+        QLabel *label = new QLabel("主机名:"+hostname, this);
         label->setStyleSheet("font-size: 16px; padding: 10px;");
         itemLayout->addWidget(label);
 
-        QLabel *olabel = new QLabel("222", this);
+        QLabel *olabel = new QLabel("类型:"+type, this);
         label->setStyleSheet("font-size: 16px; padding: 10px;");
         itemLayout->addWidget(olabel);
 
-        QLabel *plabel = new QLabel("222", this);
+        QLabel *plabel = new QLabel("主机地址:"+host, this);
         label->setStyleSheet("font-size: 16px; padding: 10px;");
         itemLayout->addWidget(plabel);
 

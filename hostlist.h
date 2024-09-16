@@ -17,7 +17,12 @@
 #include <QLabel>
 #include <QGridLayout>
 #include <QScrollArea>
-#include "Loadfile.h"
+#include <QSqlDatabase>
+#include <QSqlQuery>
+#include <QSqlError>
+#include <QVariant>
+#include <QDebug>
+#include "Qloadsql.h"
 
 
 
