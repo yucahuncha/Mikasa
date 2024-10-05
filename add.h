@@ -12,7 +12,6 @@ class add;
 }
 
 
-
 class add : public QDialog
 {
     Q_OBJECT

@@ -106,6 +106,52 @@ void hostlist::refreshHostList()
         label->setStyleSheet("font-size: 16px; padding: 10px;");
         itemLayout->addWidget(plabel);
 
+        QPushButton *button = new QPushButton("连接", this);
+        button->setStyleSheet("padding: 5px; font-size: 14px;");
+        itemLayout->addWidget(button);
+
+        // 连接按钮点击信号到槽函数
+        connect(button, &QPushButton::clicked, this, [=]() {
+            // 槽函数，点击按钮后执行的操作
+            QMessageBox::information(this, "连接信息", "主机名: " + hostname + "\n类型: " + type + "\n主机地址: " + host);
+        });
+
+        itemWidget->setContextMenuPolicy(Qt::CustomContextMenu);
+        connect(itemWidget, &QWidget::customContextMenuRequested, this, [=](const QPoint &pos){
+            QMenu contextMenu(tr("右键菜单"), this);
+
+            QAction *action1 = new QAction("删除", this);
+            QAction *action2 = new QAction("编辑", this);
+            QAction *action3 = new QAction("详情", this);
+
+            // 连接信号槽以处理菜单项选择
+            connect(action1, &QAction::triggered, this, [=](){
+
+                Qloadsql obj;
+                obj.DELETE(hostname);
+                itemWidget->update();
+                // 删除相关处理逻辑
+            });
+
+            connect(action2, &QAction::triggered, this, [](){
+                qDebug() << "编辑被点击";
+                // 编辑相关处理逻辑
+            });
+
+            connect(action3, &QAction::triggered, this, [](){
+                qDebug() << "详情被点击";
+                // 详情相关处理逻辑
+            });
+
+            // 添加动作到菜单
+            contextMenu.addAction(action1);
+            contextMenu.addAction(action2);
+            contextMenu.addAction(action3);
+
+            // 将菜单显示在鼠标点击位置
+            contextMenu.exec(itemWidget->mapToGlobal(pos));
+        });
+
         // 根据索引计算应该放置的行和列
         int row = i / itemsPerRow;
         int column = i % itemsPerRow;
@@ -120,3 +166,7 @@ void hostlist::refreshHostList()
     // 将容器widget设置为QScrollArea的内容
     scrollArea->setWidget(container);
 }
+
+
+
+

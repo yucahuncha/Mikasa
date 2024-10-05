@@ -84,6 +84,29 @@ bool Qloadsql::insertData(const QString& hostname, const QString& type, const QS
 
 }
 
+auto Qloadsql::DELETE(const QString& hostname) -> bool {
+
+    QSqlDatabase db;
+    db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("Mikasa.db");
+
+    if (!db.open()) {
+        return false;  // 如果打开数据库失败，返回 false
+    }
+
+    QSqlQuery query;
+    query.prepare(R"(DELETE FROM Mikasaconfig WHERE hostname =  :hostname;)");
+    query.bindValue(":hostname", hostname);
+
+    if (!query.exec()) {
+        db.close();
+        return false;
+    } else {
+        db.close();
+        return true;
+    }
+}
+
 int number(){
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("Mikasa.db");

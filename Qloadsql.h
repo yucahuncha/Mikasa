@@ -20,8 +20,7 @@ public:
     Qloadsql();
     ~Qloadsql();
     static bool insertData(const QString& hostname, const QString& type, const QString& host, const QString& accountName, const QString& password);
-
-    static int number();
+    auto DELETE(const QString& hostname)-> bool;
 private:
 
 };

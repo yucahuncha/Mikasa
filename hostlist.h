@@ -23,6 +23,7 @@
 #include <QVariant>
 #include <QDebug>
 #include "Qloadsql.h"
+#include <qmenu.h>
 
 
 
@@ -40,6 +41,7 @@ public:
 
     void refreshHostList();
     void showEvent(QShowEvent *event);
+
 
 private:
 
